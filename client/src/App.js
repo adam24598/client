@@ -57,10 +57,11 @@ render(){
      <div className = "App" >
     <AppNavbar/>  
     
-    {isAuthenticated ?authLinks:''}
 
-    
-    </div>
+    {user && user.name==='admin' ? adminLinks: isAuthenticated ?authLinks:''}
+
+
+                  </div>
     </Provider>
 
 
