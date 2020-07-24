@@ -19,6 +19,7 @@ import{
       name:'',
       mdp:'',
       solde:'',
+      role:''
   }
   toggle=()=>{
       this.setState({
@@ -43,9 +44,7 @@ solde:this.state.solde,
   
 }
   render(){
-    
 
-    
         
                
       return(
