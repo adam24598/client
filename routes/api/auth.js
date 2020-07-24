@@ -35,7 +35,8 @@ router.post('/', (req,res)=>{
                 user:{
                   id:user.id,
                 name:user.name,
-                solde:user.solde
+                solde:user.solde,
+                role:user.role,
               }
               })
             }

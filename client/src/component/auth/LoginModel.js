@@ -31,7 +31,6 @@ static propTypes={
     error : PropTypes.object.isRequired,
     login:PropTypes.func.isRequired,
     clearErrors:PropTypes.func.isRequired,
-    isAdmin:PropTypes.bool,
     
 };
 
@@ -142,7 +141,7 @@ render(){
  }
 const mapStateToProps = state =>({
    isAuthenticated:state.auth.isAuthenticated,
-   isAdmin:state.auth.isAdmin,
+  
    error:state.error
    
 });

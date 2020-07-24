@@ -58,7 +58,7 @@ render(){
     <AppNavbar/>  
     
 
-    {user && user.name==='admin' ? adminLinks: isAuthenticated ?authLinks:''}
+    {user && user.role==='admin' ? adminLinks: isAuthenticated ?authLinks:''}
 
 
                   </div>
