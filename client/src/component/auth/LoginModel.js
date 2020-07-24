@@ -104,7 +104,7 @@ render(){
             <Form onSubmit={this.onSubmit}>
             
             <FormGroup>
-                    <Label for="user">User</Label>
+                    <Label for="user"><strong>User</strong></Label>
                     <Input 
                     type="text"
                     name="name"
@@ -114,7 +114,7 @@ render(){
 
                 
                 
-                    <Label for="user">mdp</Label>
+                    <Label for="user"><strong>Password</strong></Label>
                     <Input 
                     type="text"
                     name="mdp"

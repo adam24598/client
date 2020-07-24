@@ -54,7 +54,7 @@ solde:this.state.solde,
 <Form onSubmit={this.onSubmit}>
 <FormGroup controlId="formBasicEmail">
   <Label>solde</Label>
-  <Input type="number" name="solde" id="user" placeholder="Entre solde" onChange={this.onChange} />
+  <Input type="number" name="solde" id="user" placeholder="Entrer solde" onChange={this.onChange} />
   
 </FormGroup>
 
