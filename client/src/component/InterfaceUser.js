@@ -12,8 +12,18 @@ import{
  import {connect} from 'react-redux';
  import {updateUser} from  '../actions/userActions';
  import PropTypes from 'prop-types'
+ import store from '../store';
+import {loadUser} from '../actions/authAction';
+
 
  class InterfaceUser extends Component{
+  static propTypes={
+    auth:PropTypes.object.isRequired
+};
+  componentDidMount(){
+    store.dispatch(loadUser());
+    
+  };
   state={
       modal:false,
       name:'',
@@ -42,18 +52,20 @@ solde:this.state.solde,
   }
   this.props.updateUser(user);
   
-}
+};
+
   render(){
 
-        
+    const {userConnected}=this.props.auth;
+
                
       return(
-          <div>
+          <div  >
                
 <Form onSubmit={this.onSubmit}>
 <FormGroup controlId="formBasicEmail">
-  <Label>solde</Label>
-  <Input type="number" name="solde" id="user" placeholder="Entrer solde" onChange={this.onChange} />
+  <Label><strong>solde</strong></Label>
+  <Input type="number" name="solde" id="user" placeholder={`votres solde actuel: `}  onChange={this.onChange} />
   
 </FormGroup>
 
@@ -99,7 +111,9 @@ onClick={this.toggle}
 
 </div>)}}
 const mapStateToProps = state =>({
-  user : state.user
+  user : state.user,
+  auth: state.auth
 });
+
 
 export default connect (mapStateToProps,{updateUser}) (InterfaceUser);

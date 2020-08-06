@@ -28,7 +28,17 @@ render(){
   const{isAuthenticated,user}=this.props.auth;
   
 
-
+const guestLinks=(
+  <Fragment>
+    <Container>
+    <div>
+                <h1><strong>Welcome To Your Community Bank </strong></h1>
+                <h2>Banking — fast and easy</h2>
+                <p>Master your money with one easy app
+                </p>
+            </div>    </Container>
+  </Fragment>
+);
 
 
     const authLinks =(
@@ -53,15 +63,17 @@ render(){
 
 
   return (
-    <Provider store={store}>
+    <Provider store={store} >
+     
      <div className = "App" >
     <AppNavbar/>  
     
 
-    {user && user.role==='admin' ? adminLinks: isAuthenticated ?authLinks:''}
 
+    {user && user.role==='admin' ? adminLinks: isAuthenticated ?authLinks:guestLinks}
+    </div>
 
-                  </div>
+                  
     </Provider>
 
 

@@ -1,3 +1,14 @@
+.App{
+  height: 100%;
+  width: 100%;
+    margin:0px;
+  background: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-fresh-bank-card-machine-advertising-background-backgroundblue-backgroundmanmoneyhand-paintedatmsimplemachine-image_83842.jpg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
 .remove-btn{
   margin-right: 0.5rem;
 }
@@ -15,3 +26,7 @@ opacity: 1;
   transition: opacity 1000ms ease-in;
 
 }
+
+h1 { color: #48d407; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; }
+h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }

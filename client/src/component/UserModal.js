@@ -52,7 +52,8 @@ render(){
 <Button
 color="dark"
 style={{marginBottom:'2rem',
-marginTop:'2rem'}}
+marginTop:'2rem',
+position:'center'}}
 onClick={this.toggle}
 >Add user</Button>
 <Modal

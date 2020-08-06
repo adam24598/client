@@ -3,7 +3,7 @@ import {Container,ListGroupItem,Button, ListGroup} from 'reactstrap';
 import {CSSTransition,TransitionGroup} from 'react-transition-group';
 import {connect} from 'react-redux';
 import {getUsers,deleteUser}from '../actions/userActions';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 
 
@@ -22,10 +22,11 @@ render(){
     
     const {users}=this.props.user;
     return (
-        <Container>
+        <Container  style={{opacity:'0.8',
+        overflow: "auto"}}>
             
-<ListGroup>
-    <TransitionGroup className="User-List">
+<ListGroup >
+    <TransitionGroup className="User-List ">
         {users.map(({_id,name,solde})=>(
            <CSSTransition key={_id} timeout={500} classNames="fade">
             <ListGroupItem >
